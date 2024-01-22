@@ -64,7 +64,7 @@
                 <div class="reactions">
 
                     <div class="icon">
-                        <i class='bx bx-heart'></i>
+                        <i class='bx bx-heart like' onclick="liked()"></i>
                          <p class="reactions_text">60k</p>
                     </div>
 
@@ -93,15 +93,39 @@
 
   
 <script>
-    
+    var message;
     var stat=document.querySelector('.subs');
     stat.innerHTML=localStorage.getItem('stat');
+
+    var reaction = document.querySelector('.like')
+    reaction.style.color=localStorage.getItem('color');
+    reaction.style.textShadow=localStorage.getItem('shadow');
+
+function liked(){
+
+    if (reaction.style.color==='black'){
+        reaction.style.color='red';
+        reaction.style.textShadow =' 0px 0px 10px red';
+    }
+   else{
+    reaction.style.color='black';
+    reaction.style.textShadow ='none';
+
+   }
+   localStorage.setItem('color',reaction.style.color);
+   localStorage.setItem('shadow',reaction.style.textShadow);
+}
+
+
 
 function clicked(){
 
     if (stat.innerHTML==='Follow'){
         stat.innerHTML='Following';
-        console.log('user is following')
+       message= localStorage.setItem('message','following');
+       
+
+      
     }
 
     else{
@@ -111,6 +135,7 @@ function clicked(){
 
     
 }
+
 
 
 </script>
