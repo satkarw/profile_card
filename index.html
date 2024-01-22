@@ -89,7 +89,123 @@
         </div>
     </div>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-Card</title>
+    <link rel="stylesheet" href="1 profile card..css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="blue">
+
+        </div>
+
+        <div class="main_container">
+                <div class="img_container">
+
+                    <img src="img.jpeg" alt="" class="profile_pic">
+                </div> 
+
+                <div class="name">Satkar Wagle</div> 
+                <div class="work">Student</div>
+                <div class="social_media">
+
+                    <div class="facebook_logo">
+                        <a href="https://www.facebook.com/satkar.wagle.73"><button class="icon_btn"><i class='bx bxl-facebook-circle  '></i></button></a>
+                       
+                        
+                    </div>
+
+                    
+                    <div class="insta_logo">
+                        <a href="https://www.instagram.com/satkarw/"> <button class="icon_btn"><i class='bx bxl-instagram'></i></button></a>
+                       
+                        
+                    </div>
+                    <div class="youtube_logo">
+                        <a href="https://open.spotify.com/user/31o57hb4k36s3kpilj25vz65r7wu"><button class="icon_btn"> <i class="bx bxl-spotify"></i> </button>
+                        </a>
+                        
+                    </div>
+
+                </div>
+                    <div class="btn"> 
+
+
+
+                        <button class="subs btns" onclick="clicked()" >Follow</button>
+                        <button class="message btns">Message</button>
+
+
+
+                    </div>
+
+                <div class="reactions">
+
+                    <div class="icon">
+                        <i class='bx bx-heart'></i>
+                         <p class="reactions_text">60k</p>
+                    </div>
+
+
+
+                    <div class="icon">
+                        
+                        <i class='bx bx-comment'></i>
+                        <p class="reactions_text">20k</p>
+                    </div>
+
+                    <div class="icon share_icon">
+                        <i class='bx bx-share'></i>
+                        <p class="reactions_text">12k</p>
+                    </div>
+
+
+                </div>
+
+
+     
+
+
+        </div>
+    </div>
+
   
+<script>
+    
+    var stat=document.querySelector('.subs');
+    stat.innerHTML=localStorage.getItem('stat');
+
+function clicked(){
+
+    if (stat.innerHTML==='Follow'){
+        stat.innerHTML='Following';
+        console.log('user is following')
+    }
+
+    else{
+        stat.innerHTML='Follow';
+    }
+    localStorage.setItem('stat',stat.innerHTML)
+
+    
+}
+
+
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
